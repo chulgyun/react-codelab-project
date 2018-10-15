@@ -11,7 +11,7 @@ const port = 3000;
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use('/', express.static(path.join(__dirname, '../../public')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send("Something's Wrong!");

@@ -1,10 +1,11 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: [
         './src/index.js',
         './src/style.css'
-    ]
+    ],
 
     output: {
         path: __dirname + '/public/',
@@ -28,7 +29,7 @@ module.exports = {
         ]
     },
 
-    resove: {
-        root: path.resolve('./src');
+    resolve: {
+        root: path.resolve('./src')
     },
 };

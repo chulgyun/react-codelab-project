@@ -1,12 +1,13 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: [
         './src/index.js',
-        './src/style.css'
         'webpack-dev-server/client?http://0.0.0.0:4000',
-        'webpack/hot/only-dev-server'
-    ]
+        'webpack/hot/only-dev-server',
+        './src/style.css',
+    ],
 
     output: {
         path: '/',
@@ -16,7 +17,7 @@ module.exports = {
     devServer: {
         hot: true,
         filename: 'bundle.js',
-        publicPach: '/',
+        publicPath: '/',
         historyApiFallback: true,
         contentBase: './public/',
         proxy: {
@@ -56,7 +57,7 @@ module.exports = {
         ]
     },
 
-    resove: {
-        root: path.resolve('./src');
+    resolve: {
+        root: path.resolve('./src')
     },
 };
