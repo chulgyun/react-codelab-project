@@ -4,6 +4,7 @@ import WebpackDevServer from 'webpack-dev-server';
 import webpack from 'webpack';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
+import api from './routes'
 
 const devPort = 4000;
 const app = express();
@@ -15,6 +16,11 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send("Something's Wrong!");
+});
+app.use('/api', api);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './../public/index.html'));
 });
 
 app.get('/hello', (req, res) => {

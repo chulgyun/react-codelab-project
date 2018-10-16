@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
     return res.status(400).json({
-      error: 'INVALID ID'.
+      error: 'INVALID ID',
       code: 1
     });
   }
@@ -75,7 +75,7 @@ router.put('/:id', (req, res) => {
 
     if (!memo) {
       return res.status(403).json({
-        error: 'NO RESOURCE'.
+        error: 'NO RESOURCE',
         code: 3
       });
     }
@@ -106,7 +106,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
     return res.status(400).json({
-      error: 'NOT LOGGED IN'.
+      error: 'NOT LOGGED IN',
       code: 1
     });
   }
@@ -118,7 +118,7 @@ router.delete('/:id', (req, res) => {
 
     if (!memo) {
       return res.status(403).json({
-        error: 'NO RESOURCE'.
+        error: 'NO RESOURCE',
         code: 3
       });
     }
