@@ -5,8 +5,8 @@ import { App, Home, Login, Register } from 'containers';
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-    <Router history =  {browserHistory}>
-        <Route path="/" component = {App}>
+    <Router history = {browserHistory}>
+        <Route path = "/" component = {App}>
             <indexRoute component = {Home}/>
             <Route path = "home" component = {Home}/>
             <Route path = "login" component = {Login}/>

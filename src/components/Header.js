@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class Header extends Component {
     render() {
@@ -21,7 +22,7 @@ class Header extends Component {
         return (
             <nav>
                 <div className="nav-wrapper blue darken-1">
-                    <a className="brand-logo center">MEMOPAD</a>
+                    <Link to="/" className="brand-logo center">MEMOPAD</Link>
                     <ul>
                         <li><a><i className="material-icons">search</i></a></li>
                     </ul>
@@ -37,8 +38,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-    isLoggedIn: React.propTypes.bool,
-    onLogout: React.propTypes.func
+    isLoggedIn: React.PropTypes.bool,
+    onLogout: React.PropTypes.func
 };
 
 Header.defaultProps = {
