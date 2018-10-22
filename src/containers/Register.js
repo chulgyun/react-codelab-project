@@ -1,5 +1,5 @@
 import React from 'react';
-import { Authentication } from 'components';
+import { Authentication } from '../components';
 
 class Register extends React.Component {
     render() {
